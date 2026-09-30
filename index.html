@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Ayuda Memoria · Servicio Alimentario Escolar 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://tile.openstreetmap.org" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="styles.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+<header class="hero">
+  <div><span class="tag">Ayuda memoria · <span id="corte"></span></span>
+    <h1>Servicio Alimentario Escolar 2026</h1>
+    <p>Prestación por ámbito territorial · <span id="fuente"></span></p></div>
+  <div class="tag" id="total-gen"></div>
+</header>
+
+<main class="wrap">
+  <section class="card filters-card" aria-label="Filtros">
+    <div class="filters">
+      <div><label for="reg">Región alimentaria</label><select id="reg"></select></div>
+      <div><label for="ut">Unidad territorial</label><select id="ut"></select></div>
+      <div><label for="dep">Departamento</label><select id="dep"></select></div>
+      <div><label for="prov">Provincia</label><select id="prov"></select></div>
+      <div><label for="dist">Distrito</label><select id="dist"></select></div>
+      <button class="btn g" id="reset" type="button">Limpiar</button>
+    </div>
+  </section>
+
+  <section id="out" aria-live="polite"></section>
+</main>
+
+<div class="foot">Fuente: Listado de Servicios Educativos PC 2026 (II tramo) · Cada fila del padrón es un servicio educativo (SSEE). · Mapa base: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">colaboradores de OpenStreetMap</a>.</div>
+
+<script src="datos.js"></script>
+<script defer src="script.js"></script>
+</body>
+</html>
